@@ -1,0 +1,102 @@
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>STAR WARS</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="fav/favicon.ico"/>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="js/sound.js"></script>
+	<script src="js/jQuery.js"></script>
+	<style>
+		@font-face {
+		  font-family: starjedi;
+		  src: url("font/starjedi.ttf");
+		}
+	  
+		* {
+		  font-family: starjedi;
+		}
+	  </style>
+
+</head>
+<body onload="drawIt()">
+	<embed src="sound/starwars.mp3" id="sound1" loop="true" autostart="false" width="2" height="0" />
+  <div class="allinfo">
+  <h4>
+    music
+  </h4>
+  <label class="switch" onclick="music()">
+    <input type="checkbox" id="musicCheck">
+    <span class="slider round"></span>
+  </label>
+
+	<button class="info" onclick="info()">©</button>
+		
+<script>
+	function info(){
+    Swal.fire({
+        title:'About',
+        text: 'Made by Jaka Karnel',
+        confirmButtonColor: '#0047AB',
+        footer: "STAR WARS ",
+        customClass: {
+          icon: 'no-border'
+        }
+      })
+  
+  }
+</script>
+	<h1>@</h1>
+	<div id="superwrap">
+	<div id="wrap">
+		<div id="slika">
+			<img id="ball" src="img/bb8_bricks-removebg-preview.png">
+			<img id="paddle" src="img/lighstaber2.webp">
+			<img id="brick1" src="img/stormtrooper (2).png">
+			<img id="brick2" src="img/bobafett.png">
+			<img id="brick3" src="img/Star-Wars-Darth-Vader-PNG-HD-Image.png">
+		</div>
+		<div id="kanvas">
+			<canvas width="600" height="600" id="canvas"></canvas>
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+			
+			<script src="js/jsBricks.js"></script>
+		</div>
+		<div id="kanvas1">
+			<canvas width="600" height="600" id="canvas1"></canvas>
+		</div>
+		
+	</div>
+	<div id="wrap1">
+		<div id="inner1">
+		</div>
+		<div id="inner">
+			<div id="innertext">
+			<a>time:</a><br/><a id="cas">00:00</a>
+			</div>
+		</div>
+		<div id="inner">
+			<div id="innertext">
+			<a>PoinTS:</a><br/><a id="tocke">0</a>
+			</div>
+		</div>
+		<div id="inner">
+			<div id="innertext">
+			<a>lives:</a><a id="zivljenja">0</a><br/>
+			<a> </a>
+			<img id="heart1" src="img/heart.png">
+			<img id="heart2" src="img/heart.png">
+			<img id="heart3" src="img/heart.png">
+			
+			<img id="heart4" src="img/dheart.png">
+			<img id="heart5" src="img/dheart.png">
+			<img id="heart6" src="img/dheart.png">
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	<a class="font">Pause: P</a>  <a class="font">Start: SPACE</a>
+</body>
+</html>
